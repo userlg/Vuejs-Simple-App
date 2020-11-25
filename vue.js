@@ -3,7 +3,8 @@ new Vue({
   data: {
     info: null,
     datos: null,
-    esp: ' '
+    esp: " ",
+    num: 0,
   },
 
   mounted() {
@@ -15,12 +16,13 @@ new Vue({
       });
   },
   methods: {
-      notificePorcentaje: function( x){
-          
-          alert('Funciona');
-      }
+    notificePorcentaje: function (x) {
+      let porcentaje = ((100 / 6) * x) / 10;
+      // alert("El porcentaje de caracteres es " + porcentaje.toFixed(2) + "%");
+      this.num = porcentaje.toFixed(2);
+    },
+    showPorcentaje: function() {
+      alert("El porcentaje de caracteres es " + this.num + "%");
+    },
   },
 });
-
-
-
