@@ -1,0 +1,8 @@
+body {
+    background: whitesmoke;
+}
+
+li {
+    list-style: none;
+    font-size: 30px;
+}
