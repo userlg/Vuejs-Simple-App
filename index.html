@@ -16,23 +16,30 @@
     <h1 class="text-center mx-auto py-4 bg-dark text-light">
       Vuejs App - Api Server
     </h1>
-    <p>
+    <p class="text-center bg-warning px-1 mx-auto w-75 h-50 py-3">
       Obtener el porcentaje de personas cuyo nombre y apellido tienen mas de 12
       caracteres.
     </p>
-    <div class="container mx-auto text-center d-flex">
+    <div class="text-center mx-auto px-3">
       <div id="app">
         <ul class="list-group">
-          <li  class='list-group-item my-2 bg-transparent text-white-60' v-for="(datos, index) in info.data" :key="index">
-            <div class="border rounded w-100 text-center mx-auto">
-            <img v-bind:src="datos.avatar" />
-            <p v-text='datos.first_name'></p>
-            <p v-tex='datos.last_name'></p>
-            
-            <hr>
-            </div>
-            
-          </li>
+          <div class="d-inline-flex px-4">
+            <li
+              class="my-auto  text-white-60 mx-2 "
+              v-for="(datos, index) in info.data"
+              :key="index"
+            >
+              <div class="border rounded w-100 text-center mx-4">
+                <img class='py-auto' v-bind:src="datos.avatar" />
+                <p v-text="datos.first_name + esp + datos.last_name"></p>
+                <h3
+                  v-if="(datos.first_name.length + datos.last_name.length) > 12"  
+                > 
+               {{  notificePorcentaje(datos.first_name.length + datos.last_name.length) }}
+                </h3>
+              </div>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
