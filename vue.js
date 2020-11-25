@@ -2,7 +2,8 @@ new Vue({
   el: "#app",
   data: {
     info: null,
-    datos: null
+    datos: null,
+    esp: ' '
   },
 
   mounted() {
@@ -14,8 +15,9 @@ new Vue({
       });
   },
   methods: {
-      mostrarId: function(){
-          console.log(this.info.id)
+      notificePorcentaje: function( x){
+          
+          alert('Funciona');
       }
   },
 });
