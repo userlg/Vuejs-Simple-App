@@ -25,24 +25,27 @@
         <ul class="list-group">
           <div class="d-inline-flex px-4">
             <li
-              class="my-auto  text-white-60 mx-2 "
+              class="my-auto text-white-60 mx-2"
               v-for="(datos, index) in info.data"
               :key="index"
             >
               <div class="border rounded w-100 text-center mx-4">
-                <img class='py-auto' v-bind:src="datos.avatar" />
+                <img class="py-auto" v-bind:src="datos.avatar" />
                 <p v-text="datos.first_name + esp + datos.last_name"></p>
                 <h3
-                  v-if="(datos.first_name.length + datos.last_name.length) > 12"  
-                > 
-               {{  notificePorcentaje(datos.first_name.length + datos.last_name.length) }}
+                  v-if="(datos.first_name.length + datos.last_name.length) > 12"
+                >
+                  {{ notificePorcentaje(datos.first_name.length +
+                  datos.last_name.length) }}
                 </h3>
               </div>
             </li>
           </div>
         </ul>
+        <button   class="my-3  py-2 btn btn-outline-dark"  @click="showPorcentaje()">Porcentaje</button>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="vue.js"></script>
