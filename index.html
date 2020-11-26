@@ -20,18 +20,23 @@
       Obtener el porcentaje de personas cuyo nombre y apellido tienen mas de 12
       caracteres.
     </p>
-    <div class="text-center mx-auto px-3">
-      <div id="app">
-        <ul class="list-group">
-          <div class="d-inline-flex px-4">
+    <div class="text-center mx-auto  px-auto border border-warning rounded">
+      <div id="app" class="mx-auto px-auto">
+        <ul >
+          <div class=" d-inline-flex  flex-row container-fluid  img-fluid" id="principal">
             <li
-              class="my-auto text-white-60 mx-2"
+              class="my-auto text-white-60 py-3 list-group"
               v-for="(datos, index) in info.data"
               :key="index"
             >
-              <div class="border rounded w-100 text-center mx-4">
-                <img class="py-auto" v-bind:src="datos.avatar" />
+              <div class=" rounded w-100 h-100" >
+
+                <div class=" container    d-block   ">
+
+                <img class=" w-auto h-auto  img-fluid rounded float-right" v-bind:src="datos.avatar" />
+
                 <p v-text="datos.first_name + esp + datos.last_name"></p>
+                </div>
                 <h3
                   v-if="(datos.first_name.length + datos.last_name.length) > 12"
                 >
