@@ -1,9 +1,16 @@
 body {
     background: whitesmoke;
+    min-width: 300px;
+    min-height: 600px;
 }
 
 li {
     list-style: none;
     font-size: 10px;
     display: inline;
+}
+
+#principal {
+    height: auto;
+    width: 100%;
 }
