@@ -20,7 +20,7 @@
       Obtener el porcentaje de personas cuyo nombre y apellido tienen mas de 12
       caracteres.
     </p>
-    <div class="text-center mx-auto  px-auto border border-warning rounded">
+    <div class="text-center mx-4 px-4 border border-warning rounded">
       <div id="app" class="mx-auto px-auto">
         <ul >
           <div class=" d-inline-flex  flex-row container-fluid  img-fluid" id="principal">
@@ -29,9 +29,9 @@
               v-for="(datos, index) in info.data"
               :key="index"
             >
-              <div class=" rounded w-100 h-100" >
+              <div class=" rounded " >
 
-                <div class=" container    d-block   ">
+                <div class=" container  text-center align-items-center">
 
                 <img class=" w-auto h-auto  img-fluid rounded float-right" v-bind:src="datos.avatar" />
 
